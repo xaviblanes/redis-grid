@@ -1,0 +1,101 @@
+* {
+	font-family: sans-serif;
+}
+
+.logo { 
+	grid-area: logo;
+	background-color: #161f31;
+}
+
+/* la classe menú */
+.menu { 
+	grid-area: menu; 
+	background-color: #161f31;
+	font-size: 2em;
+	}
+	
+.menu ul {
+  list-style-type: none;
+  overflow: hidden;
+}
+
+.menu li {
+  float: right;
+  font-size:0.8em;
+}
+
+.menu li a {
+  display: block;
+  color: #eee;
+  text-align: center;
+  padding: 14px;
+  text-decoration: none;
+}
+
+.menu li a:hover {
+  text-decoration: underline;
+}
+
+.col1 { 
+    grid-area: col1;
+    font-size: 1.4em;
+    text-align: center;
+    padding: 10px;
+ }
+ 
+.col2 { 
+    grid-area: col2;
+ 	padding: 10px;
+ 	}
+ 	
+.footer { 
+	grid-area: footer;
+	background-color: #161f31;
+	color: white;
+	text-align: center;
+	font-size:14px;
+	border-top: solid 1px; 
+	padding: 10px;
+	}
+	
+.footer a {color: #bbb;}
+
+.boto {
+    background-color: #f80000;
+    border: solid 0px;
+    padding:20px;
+}
+
+.boto a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+ }
+
+.boto:hover {
+    background-color: #cf0;
+    color: white;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-areas:
+    'logo menu menu menu menu menu'
+    'col1 col1 col1 col2 col2 col2'
+    'footer footer footer footer footer footer';
+  gap: 0px;
+  padding: 0px;
+}
+
+@media only screen and (max-width: 620px) {
+  /* For mobile phones: */
+  .grid-container {
+  	grid-template-areas:
+    	'logo logo logo'
+    	'menu menu menu'
+    	'col1 col1 col1'
+    	'col2 col2 col2'
+    	'footer footer footer';
+	}
+}
+
